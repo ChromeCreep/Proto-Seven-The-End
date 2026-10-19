@@ -11,7 +11,12 @@ public class GridPlayerController : TileContentsController
     public int energyAmount = 3;
     public bool hasEnergy = true;
     public TextMeshProUGUI energyText;
-    
+
+    private void Start()
+    {
+        energyText = 
+    }
+
     private void Update()
     {
         if (hasEnergy)
