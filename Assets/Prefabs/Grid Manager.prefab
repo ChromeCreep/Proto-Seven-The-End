@@ -44,11 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac14295de30ca446ae4f6b6d4d6106d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapSize: {x: 5, y: 5}
+  MapSize: {x: 12, y: 8}
   Enemies: 2
+  Islands: 5
+  Points: 5
   PlayerPrefab: {fileID: 7999081994348923804, guid: 41ac417f882cc8747846832e8c066323, type: 3}
   EnemyPrefab: {fileID: 2474359441942034483, guid: 6748f56e6f151864295a944892352913, type: 3}
   TilePrefab: {fileID: 1941147432706639702, guid: 406f2bf34c74dcc4383318eac3243fd9, type: 3}
+  IslandPrefab: {fileID: 614368423434698441, guid: b1e5ec950c5d6234c9fedad53713ed2e, type: 3}
+  PointPrefab: {fileID: 7805109767849042412, guid: e8f121730f4b5bb43a363f06f385ad57, type: 3}
   AllTiles: []
   Player: {fileID: 0}
   AllEnemies: []
+  AllIslands: []
+  AllPoints: []

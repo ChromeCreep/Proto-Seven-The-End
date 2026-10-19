@@ -12,12 +12,14 @@ public class GridManager : MonoBehaviour
     //How many enemies should we spawn?
     public int Enemies = 2;
     public int Islands = 5;
+    public int Points = 5;
     
     //Prefabs for spawning
     public GridPlayerController PlayerPrefab;
     public GridEnemyController EnemyPrefab;
     public TileController TilePrefab;
     public GridIsland IslandPrefab;
+    public GridPoint PointPrefab;
 
     //A set of coordinates for the map
     //Don't worry about the details of this too hard, it's very ugly
@@ -29,6 +31,7 @@ public class GridManager : MonoBehaviour
     public GridPlayerController Player;
     public List<GridEnemyController> AllEnemies;
     public List<GridIsland> AllIslands;
+    public List<GridPoint> AllPoints;
 
     void Awake()
     {
@@ -94,6 +97,7 @@ public class GridManager : MonoBehaviour
         //    emptyTiles.Remove(chosen);
         //}
 
+        // Island Spawning
         for (int n = 0; n < Islands; n++)
         {
             //If we run out of free tiles, just end the loop
@@ -105,6 +109,20 @@ public class GridManager : MonoBehaviour
             l.SetTile(chosen);
             //Add the enemy to our tracker list
             AllIslands.Add(l);
+            //Remove the filled tile from the list of tiles--it's no longer empty
+            emptyTiles.Remove(chosen);
+        }
+        // Points Spawning
+        for (int n = 0; n < Points; n++)
+        {
+            //If we run out of free tiles, just end the loop
+            if (emptyTiles.Count <= 0) break;
+            //Choose a random tile
+            chosen = emptyTiles[Random.Range(0, emptyTiles.Count)];
+            GridPoint p = Instantiate(PointPrefab);
+            p.SetTile(chosen);
+            //Add the enemy to our tracker list
+            AllPoints.Add(p);
             //Remove the filled tile from the list of tiles--it's no longer empty
             emptyTiles.Remove(chosen);
         }

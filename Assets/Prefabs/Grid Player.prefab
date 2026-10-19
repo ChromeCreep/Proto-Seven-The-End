@@ -138,4 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SR: {fileID: 0}
   Tile: {fileID: 0}
-  energyAmount: 8
+  energyAmount: 10
+  hasEnergy: 1

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GridPlayerController : TileContentsController
 {
@@ -9,6 +10,7 @@ public class GridPlayerController : TileContentsController
     //Note that it inherits from TileContentsController, so it has all its variables/functions
     public int energyAmount = 3;
     public bool hasEnergy = true;
+    public TextMeshProUGUI energyText;
     
     private void Update()
     {
@@ -41,7 +43,8 @@ public class GridPlayerController : TileContentsController
                 energyAmount--;
             }
 
-
+            string energyAmountString = energyAmount.ToString();
+            energyText.text = energyAmountString;
         }
 
         if (energyAmount == 0)
@@ -65,6 +68,13 @@ public class GridPlayerController : TileContentsController
             energyAmount = energyAmount + 5;
 
             SetTile(where);
+        }
+
+        if (who is GridPoint)
+        {
+            who.Die();
+            SetTile(where);
+            Debug.Log("Add to score!");
         }
     }
 }
