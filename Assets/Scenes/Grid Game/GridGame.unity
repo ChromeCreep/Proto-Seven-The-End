@@ -347,6 +347,41 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &760235228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760235229}
+  m_Layer: 5
+  m_Name: Score System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &760235229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760235228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1189471754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1067666932
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +394,7 @@ GameObject:
   - component: {fileID: 1067666935}
   - component: {fileID: 1067666934}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Energy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -381,7 +416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -489, y: 291}
+  m_AnchoredPosition: {x: -410, y: 199}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067666934
@@ -690,6 +725,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1067666933}
+  - {fileID: 760235229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -710,17 +746,13 @@ PrefabInstance:
       value: Grid Manager
       objectReference: {fileID: 0}
     - target: {fileID: 1717525725370996177, guid: b0348def863b4254aa7f838dc151102e, type: 3}
-      propertyPath: MapSize.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1717525725370996177, guid: b0348def863b4254aa7f838dc151102e, type: 3}
-      propertyPath: MapSize.y
+      propertyPath: Points
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1717525725370996177, guid: b0348def863b4254aa7f838dc151102e, type: 3}
-      propertyPath: IslandPrefab
-      value: 
-      objectReference: {fileID: 614368423434698441, guid: b1e5ec950c5d6234c9fedad53713ed2e, type: 3}
+      propertyPath: Islands
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6706129121618403822, guid: b0348def863b4254aa7f838dc151102e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04
